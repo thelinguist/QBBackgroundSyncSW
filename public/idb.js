@@ -1,5 +1,9 @@
 'use strict';
 
+
+/**
+ * a container of handy functions
+ */
 (function() {
   function toArray(arr) {
     return Array.prototype.slice.call(arr);

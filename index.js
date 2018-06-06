@@ -1,3 +1,4 @@
+//for node server
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -8,7 +9,7 @@ app.use(cors());
 
 // viewed at http://localhost:8080
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index2.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 console.log("listenting on 8080");

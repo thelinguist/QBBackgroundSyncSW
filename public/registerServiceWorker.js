@@ -14,7 +14,9 @@ $(document).ready(()=>{
                     //form submittal
                     $('#submit-form').on('click', (event)=>{
                         var data = getFormData();
-                        console.log(data);
+                        var appToken = "";          //TODO: add App Token
+                        data.appToken = appToken;
+                        console.log('telling service worker to send:', data);
 
                         //create messages database
                         store.outbox('readwrite').then(function(outbox) {
@@ -27,9 +29,7 @@ $(document).ready(()=>{
                     });//end form submittal
 
                 }
-            }).catch(function(err) {
-                console.log(err);
-            });
+            }).catch(console.error);
         });
     }//end register
 

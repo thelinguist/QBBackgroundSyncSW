@@ -2,6 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- in case you run this on local host use the following content-security-policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+         default-src 'self' 'unsafe-inline' data: gap: https://ssl.gstatic.com https://mcftech.quickbase.com https://maxcdn.bootstrapcdn.com https://code.jquery.com 'unsafe-eval';
+         media-src *; img-src 'self' data: content:;">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
@@ -18,17 +23,17 @@
         <br>
         <div class="col-md-4 col-md-offset-4">
             <form>
-                <label for="">Enter Text 1</label>
+                <label for="text1">First Name</label>
                 <div class="form-group">
                     <input id="text1" type="text" class="form-control">
                 </div>
-                <label for="">Enter Text 1</label>
+                <label for="text2">Last Name</label>
                 <div class="form-group">
                     <input id="text2" type="text" class="form-control">
                 </div>
-                <label for="">Enter Text 1</label>
+                <label for="text3">Phone number</label>
                 <div class="form-group">
-                    <input id="text3" type="text" class="form-control">
+                    <input id="text3" type="tel" class="form-control">
                 </div>
                 <div id="submit-form" class="btn btn-success btn-block">Submit Message</div>
             </form>
@@ -48,7 +53,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- custom script -->
-    <script src="./test.js"></script>
+    <script src="/test.js"></script>
     <!-- service worker registration -->
     <script src="./registerServiceWorker.js"></script>
 </body>
